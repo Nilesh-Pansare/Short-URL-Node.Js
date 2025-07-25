@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .form-table td {
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+    .form-table input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="signup-container">
+    <h1>Signup</h1>
+    <!-- Table-based form layout -->
+    <form action="/user" method="post">
+      <table class="form-table">
+        <tr>
+          <td><label for="name">Full Name</label></td>
+          <td><input type="text" required name="name" id="name" placeholder="Enter your full name" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="text" required name="email" id="email" placeholder="Enter your email" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td><input type="password" required name="password" id="password" placeholder="Create a password" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <button type="submit">Signup</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>
